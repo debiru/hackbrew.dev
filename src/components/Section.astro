@@ -1,0 +1,21 @@
+---
+import Link from '/src/components/Link.astro';
+import { setID, getID } from '/src/config/view';
+let { heading, id, lv } = Astro.props;
+const Heading = `h${lv}`;
+---
+
+<section class={ `mod-section lv-${lv}` } id={ setID(id) }>
+  <div class="mod-section-header">
+    <Heading><Link url={ getID() } label={ heading } /></Heading>
+  </div>
+  <div class="mod-section-body">
+    {
+      Astro.slots.has('section-child') && <div class="mod-section-child first"><slot name="section-child" /></div>
+    }{
+      Astro.slots.has('section-sub-sections') && <div class="mod-section-sub-sections"><slot name="section-sub-section" /></div>
+    }{
+      Astro.slots.has('section-child-last') && <div class="mod-section-child last"><slot name="section-child-last" /></div>
+    }
+  </div>
+</section>

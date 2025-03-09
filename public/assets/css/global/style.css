@@ -26,39 +26,33 @@ body {
   min-height: 100dvh;
 }
 
-#page-header .content-inner {
+#page-header .firstGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #ccc;
 }
-#page-header .siteName {
-  padding-block: 8px;
+#page-header .firstGroup .siteName {
+  padding: 8px;
 }
-
-#page-main {
-  text-align: center;
-}
-#page-main .content-inner > * {
-  margin-top: 30px;
-}
-#page-main h1 {
-  font-family: serif;
-  font-weight: bold;
-  font-size: 3.2rem;
+#page-header .firstGroup .globalNavArea {
+  padding: 8px;
 }
 
 #page-footer {
   border-top: 1px solid #999;
   background: #f0f0f0;
 }
-#page-footer .footerArea {
+#page-footer .contentArea {
   padding: 4px 8px 8px;
 }
-#page-footer .footerArea .copyright {
+#page-footer .contentArea .copyright {
   padding-top: 4px;
   text-align: center;
   font-family: Verdana, sans-serif;
   font-size: 1.4rem;
 }
-#page-footer .footerArea .copyright img {
+#page-footer .contentArea .copyright img {
   margin-top: -4px;
   vertical-align: middle;
 }

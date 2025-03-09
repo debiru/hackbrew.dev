@@ -1,0 +1,15 @@
+---
+import Link from '/src/components/Link.astro';
+import { args, pages, img, route } from '/src/config/view';
+---
+
+<div class="content-inner">
+  <div class="firstGroup">
+    <h1 class="siteName"><Link url={ route('/') }><img src={ img('global/hackbrewdev-logo.png') } alt="hackbrew.dev" width="128" height="72"></Link></h1>
+    <div class="globalNavArea">
+      <p class="hatena-bookmark">
+        <a href={ `https://b.hatena.ne.jp/entry/s/${args.siteRootUrlWithoutProtocol}` } class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-normal" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script src="https://b.st-hatena.com/js/bookmark_button.js" async="async"></script>
+      </p>
+    </div>
+  </div>
+</div>

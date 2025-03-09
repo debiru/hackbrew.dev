@@ -27,35 +27,29 @@ body {
 }
 
 #page-header {
-  .content-inner {
+  .firstGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid #ccc;
-  }
-  .siteName {
-    padding-block: 8px;
+
+    .siteName {
+      padding: 8px;
+    }
+    .globalNavArea {
+      padding: 8px;
+    }
   }
 }
 
 #page-main {
-  text-align: center;
-
-  .content-inner {
-    > * {
-      margin-top: 30px;
-    }
-  }
-
-  h1 {
-    font-family: serif;
-    font-weight: bold;
-    font-size: 3.2rem;
-  }
 }
 
 #page-footer {
   border-top: 1px solid #999;
   background: #f0f0f0;
 
-  .footerArea {
+  .contentArea {
     padding: 4px 8px 8px;
 
     .copyright {
