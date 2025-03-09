@@ -7,6 +7,12 @@ export const args = {
   twitter: '@debiru_R',
 };
 
+export const pages = [
+  { route: '/', label: 'About' },
+  { route: '/community', label: 'Community' },
+  { route: '/contact', label: 'Contact' },
+];
+
 export const app = {
   init(Astro) {
     app.Astro = Astro;

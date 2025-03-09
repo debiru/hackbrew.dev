@@ -1,0 +1,39 @@
+@use "sass:string";
+
+@function rgb($r, $g, $b, $a) {
+  @return string.unquote("rgb(#{$r} #{$g} #{$b} / #{$a})");
+}
+
+@function ltrim($str, $char: ' ') {
+   @if (str-slice($str, 1, 1) == $char) {
+     @return ltrim(str-slice($str, 2), $char);
+   }
+   @else {
+     @return $str;
+   }
+}
+
+@function img($path) {
+  @return "/assets/img/" + ltrim($path, "/");
+}
+
+@mixin window($min: null, $max: null) {
+  @if $min != null { $min: $min + 0px; }
+  @if $max != null { $max: $max + 0px; }
+
+  @if $min != null and $max != null {
+    @media screen and ($min <= width < $max + 1px) {
+      @content;
+    }
+  }
+  @else if $min != null {
+    @media screen and ($min <= width) {
+      @content;
+    }
+  }
+  @else if $max != null {
+    @media screen and (width < $max + 1px) {
+      @content;
+    }
+  }
+}

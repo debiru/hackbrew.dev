@@ -1,0 +1,19 @@
+---
+import { Link, Section } from '/src/components';
+import Layout from '/src/layouts/Layout.astro';
+import Util from '/src/config/Util';
+import { app, args, assets, img, route } from '/src/config/view';
+const pageArgs = {};
+app.init(Astro, pageArgs);
+---
+
+<Layout>
+  <div class="content-inner">
+    <Section heading="hackbrew.dev 管理者の連絡先" id="contact" lv="2">
+      <Fragment slot="section-child">
+        <p>hackbrew.dev は、debiru（でびる）と 8ear（すずくま）の2人で管理しています。</p>
+        <p>管理者へ連絡したい場合は、debiru のメールアドレス <code>main.coeurl@gmail.com</code> または Twitter <Link url="https://x.com/debiru_R" label="@debiru_R" /> までご連絡ください。</p>
+      </Fragment>
+    </Section>
+  </div>
+</Layout>

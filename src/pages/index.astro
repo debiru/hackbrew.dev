@@ -1,4 +1,5 @@
 ---
+import { Link, Section } from '/src/components';
 import Layout from '/src/layouts/Layout.astro';
 import Util from '/src/config/Util';
 import { app, args, assets, img, route } from '/src/config/view';
@@ -8,7 +9,49 @@ app.init(Astro, pageArgs);
 
 <Layout>
   <div class="content-inner">
-    <h1>Welcome to Astro Site</h1>
-    <p class="sample-link"><a href={ route('/subpage') }>Subpage</a></p>
+    <Section heading="hackbrew.dev について" id="about" lv="2">
+      <Fragment slot="section-child">
+        <p><strong>hackbrew.dev</strong> は Web 開発に関わる情報技術全般の意見交換をする目的のコミュニティです。</p>
+        <dl>
+          <div class="di">
+            <dt>創設日</dt>
+            <dd>2025年3月9日</dd>
+          </div>
+          <div class="di">
+            <dt>コミュニティ名</dt>
+            <dd>hackbrew.dev（ハック ブリュー・デヴ）</dd>
+            <dd>別表記：HackBrew.dev / HackBrew / hackbrew / HBD</dd>
+          </div>
+          <div class="di">
+            <dt>ハッシュタグ</dt>
+            <dd>#hackbrewdev</dd>
+          </div>
+          <div class="di">
+            <dt>ドメイン名</dt>
+            <dd>hackbrew.dev</dd>
+            <dd><Link url="https://hackbrew.dev"></dd>
+          </div>
+          <div class="di">
+            <dt>運営者</dt>
+            <dd>
+              <ul>
+                <li>debiru（でびる） - Twitter: <Link url="https://x.com/debiru_R" label="@debiru_R" /></li>
+                <li>8ear（すずくま）</li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
+      </Fragment>
+    </Section>
+    <Section heading="hackbrew.dev 創設のきっかけ" id="establish" lv="2">
+      <Fragment slot="section-child">
+        <p>debiru（でびる）と 8ear（すずくま）は Web エンジニアとして活動しています。Web アプリケーション開発を業務および趣味として行っていますが、その中でもフロントエンド開発領域を専門としています。HTML, CSS, JavaScript, Vue, React などを中心とした Web フロントエンド開発に関する情報共有や意見交換をするコミュニティが身近にないという話になり、なければ主催してしまおうということで発足することしました。</p>
+      </Fragment>
+    </Section>
+    <Section heading="hackbrew.dev の由来" id="derivation" lv="2">
+      <Fragment slot="section-child">
+        <p>xxx.js や xxx.css のような名前のコミュニティはいくつか存在しており、それに近い名前を考えていました。xxx.cafe のような名前はどうかと検討していましたが、その名前にしたとしてドメイン名を利用する際に .cafe という TLD のドメイン名を登録することを考えると費用や TLD の安定性が気になりました。同時に xxx の部分を考えなくてはということで HTML.cafe や TokyoDev.cafe のような名前を考えましたが debiru や bear (8ear) の頭文字 D, B を使えないかといろいろ考えた結果、cafe に近い意味を持つ brew と TLD としての dev、さらに技術コミュニティであることを示せそうな単語として hack を選び、hackbrew.dev を採用することにしました。4単語以上では長すぎる印象があり、略語を3文字にしたかったりというところも含めて考えましたが、結果的に略称は HBD となりました。もちろん、この名前のドメイン名が空いていることや、既存の別コミュニティと被っていないことなどを確認した上で候補を検討しました。</p>
+      </Fragment>
+    </Section>
   </div>
 </Layout>
